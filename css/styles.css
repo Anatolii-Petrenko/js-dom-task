@@ -1,0 +1,65 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+body {
+  background-color: rgb(233, 230, 218);
+}
+.container {
+  height: 100%;
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 4px solid;
+  border-radius: 10px;
+}
+.header {
+  height: 200px;
+  background: url("../img/coffee-header-mod.png") center top no-repeat;
+  background-size: cover;
+  border-radius: 6px 6px 0px 0px;
+}
+.heder__title {
+  display: block;
+  padding-top: 30px;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 64px;
+  color: beige;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgb(78, 41, 25);
+}
+.main {
+  flex: 1 1 auto;
+}
+.footer {
+  text-align: center;
+}
+.menu__items {
+  max-width: 150px;
+  min-width: 100px;
+  margin: 20px 20px;
+}
+
+.menu__item {
+  font-size: 20px;
+  padding: 5px 0px;
+  margin: 0px 5px;
+  /* border: 2px solid;
+  border-radius: 5px; */
+}
+.menu__item:hover {
+  /* border-bottom: 2px solid; */
+  text-shadow: 1px 1px 4px rgb(78, 41, 25);
+  /* box-shadow: 1px 1px 5px black; */
+}
+
+@media (max-width: 360px) {
+  .menu__items {
+    margin: 20px auto;
+  }
+  .heder__title {
+    padding-top: 15px;
+  }
+}
