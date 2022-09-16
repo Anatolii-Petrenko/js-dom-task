@@ -16,7 +16,7 @@ body {
   border-radius: 10px;
 }
 .header {
-  height: 200px;
+  min-height: 200px;
   background: url("../img/coffee-header-mod.png") center top no-repeat;
   background-size: cover;
   border-radius: 6px 6px 0px 0px;
@@ -31,33 +31,68 @@ body {
   text-shadow: 1px 1px 4px rgb(78, 41, 25);
 }
 .main {
+  position: relative;
   flex: 1 1 auto;
+  display: flex;
 }
 .footer {
   text-align: center;
+  margin-bottom: 5px;
 }
-.menu__items {
-  max-width: 150px;
-  min-width: 100px;
+.nav__menu {
+  position: relative;
+  min-width: 150px;
   margin: 20px 20px;
+  min-height: 300px;
 }
 
 .menu__item {
   font-size: 20px;
   padding: 5px 0px;
   margin: 0px 5px;
-  /* border: 2px solid;
-  border-radius: 5px; */
 }
-.menu__item:hover {
-  /* border-bottom: 2px solid; */
-  text-shadow: 1px 1px 4px rgb(78, 41, 25);
-  /* box-shadow: 1px 1px 5px black; */
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-content__header {
+  color: rgb(30, 0, 0);
+  padding-top: 20px;
+  font-family: "Berkshire Swash", cursive;
+  font-size: 48px;
+  text-decoration-line: underline;
 }
 
-@media (max-width: 360px) {
-  .menu__items {
+.main-content__image {
+  padding-top: 20px;
+  max-height: 200px;
+  width: auto;
+}
+.main-content__description {
+  font-size: 16px;
+  padding-top: 20px;
+  margin: 0px 30px;
+  line-height: 1.5;
+  align-self: start;
+}
+.main-content__list {
+  align-self: start;
+}
+.main-content__list-item {
+  list-style: circle;
+  list-style-position: inside;
+}
+.menu__item:hover {
+  text-shadow: 1px 1px 4px rgb(78, 41, 25);
+  cursor: pointer;
+}
+
+. @media (max-width: 360px) {
+  .nav__menu {
     margin: 20px auto;
+    text-align: center;
   }
   .heder__title {
     padding-top: 15px;
