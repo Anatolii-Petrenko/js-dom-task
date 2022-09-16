@@ -89,6 +89,7 @@ body {
 .main-content__list-item {
   list-style: circle;
   list-style-position: inside;
+  text-align: left;
 }
 .menu__item:hover {
   text-shadow: 1px 1px 4px rgb(78, 41, 25);
