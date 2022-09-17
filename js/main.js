@@ -91,7 +91,8 @@ const mainContent = document.querySelector(".main-content");
 function createMenuItems(menuItems) {
   const navMenuItems = menuItems
     .map(
-      (item) => `<li id = "${item.id}" class="menu__item">${item.menuItem}</li>`
+      (item) =>
+        `<a id = "${item.id}" href = "#coffee${item.id}" class="menu__item">${item.menuItem}</a>`
     )
     .join("");
   navMenu.innerHTML = navMenuItems;
@@ -99,19 +100,19 @@ function createMenuItems(menuItems) {
 
 createMenuItems(content);
 
-function showArticles(menuItem, img, description) {
-  const article = `<h1 class="main-content__header">${menuItem}</h1>
+function showArticles(id, menuItem, img, description) {
+  const article = `<h1 id = "coffee${id}" class="main-content__header">${menuItem}</h1>
 	<img class = "main-content__image" src="${img}" alt="cup of ${menuItem}" />
 	<p class="main-content__description">${description}</p>`;
   mainContent.innerHTML = article;
 }
 
 const changeArticle = function (event) {
-  const { menuItem, img, description } = content.find(
+  const { id, menuItem, img, description } = content.find(
     (obj) => obj.id === Number(event.target.id)
   );
 
-  showArticles(menuItem, img, description);
+  showArticles(id, menuItem, img, description);
 };
 
 navMenu.addEventListener("click", changeArticle);
