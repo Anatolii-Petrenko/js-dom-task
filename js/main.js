@@ -106,7 +106,7 @@ function showArticles(id, menuItem, img, description) {
 	<img class = "main-content__image" src="${img}" alt="cup of ${menuItem}" />
 	<p class="main-content__description">${description}</p>
 	<div id="scrollTop" class="scroll-to-top-btn scroll-to-top-btn_hide">
-		<a class="scroll-to-top__icon" href="#main-header"><</a>
+		<a class="scroll-to-top__icon" href="#main-header">^</a>
 	</div>`;
   mainContent.innerHTML = article;
 }
